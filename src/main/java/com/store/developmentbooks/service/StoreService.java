@@ -11,9 +11,7 @@ public class StoreService {
     @Autowired
     private UpdateBookService updateBookService;
 
-    private Boolean cleanCodeSuperiorZero, cleanCoderSuperiorZero, cleanArchitectureSuperiorZero, tTDSuperiorZero, wewlcSuperiorZero;
-
-    private int returnGreatestNumber(Order order){
+    public int returnGreatestNumber(Order order){
         int greatestNumber = order.getCleanCode();
 
         if (order.getCleanCoder() > greatestNumber)

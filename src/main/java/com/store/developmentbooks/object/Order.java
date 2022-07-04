@@ -7,6 +7,18 @@ public class Order {
     private int testDriverDevelopment;
     private int workingEffectivelyWithLegacyCode;
 
+    public Order(){
+
+    }
+
+    public Order(int cleanCode, int cleanCoder, int cleanArchitecture, int testDriverDevelopment, int workingEffectivelyWithLegacyCode){
+        this.cleanCode = cleanCode;
+        this.cleanCoder = cleanCoder;
+        this.cleanArchitecture = cleanArchitecture;
+        this.testDriverDevelopment = testDriverDevelopment;
+        this.workingEffectivelyWithLegacyCode = workingEffectivelyWithLegacyCode;
+    }
+
     public int getCleanCode() {
         return cleanCode;
     }
