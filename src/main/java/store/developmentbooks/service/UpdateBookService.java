@@ -1,6 +1,6 @@
-package com.store.developmentbooks.service;
+package store.developmentbooks.service;
 
-import com.store.developmentbooks.object.BookCounterUpdate;
+import store.developmentbooks.object.BookCounterUpdate;
 import org.springframework.stereotype.Service;
 
 @Service

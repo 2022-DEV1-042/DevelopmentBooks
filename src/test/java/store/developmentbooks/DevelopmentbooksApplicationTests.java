@@ -1,9 +1,9 @@
-package com.store.developmentbooks;
+package store.developmentbooks;
 
-import com.store.developmentbooks.controller.StoreController;
-import com.store.developmentbooks.object.BookCounterUpdate;
-import com.store.developmentbooks.object.Order;
-import com.store.developmentbooks.service.StoreService;
+import store.developmentbooks.controller.StoreController;
+import store.developmentbooks.object.BookCounterUpdate;
+import store.developmentbooks.object.Order;
+import store.developmentbooks.service.StoreService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,12 +15,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class DevelopmentbooksApplicationTests {
 
 	@Autowired
+	StoreController storeController;
+	@Autowired
 	StoreService storeService;
-
-	@Test
-	void contextLoads() {
-		Assert.notNull(StoreController.class, "StoreController cannot be loaded");
-	}
 
 	@Test
 	void greatestNumber(){
@@ -82,5 +79,14 @@ class DevelopmentbooksApplicationTests {
 		order = new Order(0, 1, 3, 3, 2);
 		// 160 + 135 + 95
 		assertEquals(390, storeService.computePrice(order));
+	}
+
+	@Test
+	void testController(){
+		Order order = new Order(2, 1, 3, 1, 2);
+		assertEquals(372.5, storeController.buy(order));
+
+		order = new Order(0, 1, 3, 3, 2);
+		assertEquals(390, storeController.buy(order));
 	}
 }

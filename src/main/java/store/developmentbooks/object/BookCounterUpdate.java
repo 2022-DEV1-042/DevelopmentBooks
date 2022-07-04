@@ -1,4 +1,4 @@
-package com.store.developmentbooks.object;
+package store.developmentbooks.object;
 
 public class BookCounterUpdate {
     private int cleanCode;
