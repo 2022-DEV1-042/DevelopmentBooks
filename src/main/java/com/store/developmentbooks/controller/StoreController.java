@@ -16,7 +16,7 @@ public class StoreController {
     private StoreService storeService;
 
     @PostMapping("/buy")
-    public double buy(@RequestBody Order order) throws Exception {
+    public double buy(@RequestBody Order order) {
         return storeService.computePrice(order);
     }
 }

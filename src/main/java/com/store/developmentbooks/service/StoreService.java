@@ -64,7 +64,7 @@ public class StoreService {
             return 187.5;
     }
 
-    public double computePrice(Order order) throws Exception {
+    public double computePrice(Order order) {
         int greatestNumber = returnGreatestNumber(order);
         double price = 0;
         BookCounterUpdate bookCounterUpdate = initBookCounterUpdate(order);
