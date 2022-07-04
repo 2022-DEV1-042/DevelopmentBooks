@@ -44,7 +44,43 @@ class DevelopmentbooksApplicationTests {
 	}
 
 	@Test
-	void oneBookFiftyEuros(){
-		Assert.isTrue(false, "Implement the test");
+	void oneBookFiftyEuros() throws Exception{
+		Order order = new Order(0, 1, 0, 0, 0);
+		assertEquals(storeService.computePrice(order), 50);
+	}
+
+	@Test
+	void twoBooksNinetyFiveEuros() throws Exception{
+		Order order = new Order(0, 1, 0, 1, 0);
+		assertEquals(storeService.computePrice(order), 95);
+	}
+
+	@Test
+	void threeBooks() throws Exception{
+		Order order = new Order(0, 1, 0, 1, 1);
+		assertEquals(storeService.computePrice(order), 135);
+	}
+
+	@Test
+	void fourBooks() throws Exception{
+		Order order = new Order(1, 1, 0, 1, 1);
+		assertEquals(storeService.computePrice(order), 160);
+	}
+
+	@Test
+	void fiveBooks() throws Exception{
+		Order order = new Order(1, 1, 1, 1, 1);
+		assertEquals(storeService.computePrice(order), 187.5);
+	}
+
+	@Test
+	void multipleSeries() throws Exception{
+		Order order = new Order(2, 1, 3, 1, 2);
+		// 187.5 + 135 + 50
+		assertEquals(storeService.computePrice(order), 372.5);
+
+		order = new Order(0, 1, 3, 3, 2);
+		// 160 + 135 + 95
+		assertEquals(storeService.computePrice(order), 390);
 	}
 }
