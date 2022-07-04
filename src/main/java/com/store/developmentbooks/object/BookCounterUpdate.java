@@ -13,6 +13,17 @@ public class BookCounterUpdate {
     private boolean tTDSuperiorZero;
     private boolean wewlcSuperiorZero;
 
+    public BookCounterUpdate(boolean cleanCodeSuperiorZero, boolean cleanCoderSuperiorZero, boolean cleanArchitectureSuperiorZero, boolean tTDSuperiorZero, boolean wewlcSuperiorZero) {
+        this.cleanCodeSuperiorZero = cleanCodeSuperiorZero;
+        this.cleanCoderSuperiorZero = cleanCoderSuperiorZero;
+        this.cleanArchitectureSuperiorZero = cleanArchitectureSuperiorZero;
+        this.tTDSuperiorZero = tTDSuperiorZero;
+        this.wewlcSuperiorZero = wewlcSuperiorZero;
+    }
+
+    public BookCounterUpdate() {
+    }
+
     public int getCleanCode() {
         return cleanCode;
     }
@@ -92,4 +103,5 @@ public class BookCounterUpdate {
     public void setWewlcSuperiorZero(boolean wewlcSuperiorZero) {
         this.wewlcSuperiorZero = wewlcSuperiorZero;
     }
+
 }
