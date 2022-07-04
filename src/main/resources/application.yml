@@ -1,0 +1,10 @@
+server:
+  servlet:
+    context-path: '/'
+  port: 8080
+spring:
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
+  profiles:
+    active: development
