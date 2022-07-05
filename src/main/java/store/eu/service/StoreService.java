@@ -1,7 +1,7 @@
-package store.developmentbooks.service;
+package store.eu.service;
 
-import store.developmentbooks.object.BookCounterUpdate;
-import store.developmentbooks.object.Order;
+import store.eu.object.BookCounterUpdate;
+import store.eu.object.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

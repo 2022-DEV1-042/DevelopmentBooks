@@ -1,7 +1,7 @@
-package store.developmentbooks.controller;
+package store.eu.controller;
 
-import store.developmentbooks.object.Order;
-import store.developmentbooks.service.StoreService;
+import store.eu.object.Order;
+import store.eu.service.StoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

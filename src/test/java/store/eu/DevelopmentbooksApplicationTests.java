@@ -1,13 +1,12 @@
-package store.developmentbooks;
+package store.eu;
 
-import store.developmentbooks.controller.StoreController;
-import store.developmentbooks.object.BookCounterUpdate;
-import store.developmentbooks.object.Order;
-import store.developmentbooks.service.StoreService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.util.Assert;
+import store.eu.controller.StoreController;
+import store.eu.object.BookCounterUpdate;
+import store.eu.object.Order;
+import store.eu.service.StoreService;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

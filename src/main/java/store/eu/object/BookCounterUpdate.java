@@ -1,4 +1,4 @@
-package store.developmentbooks.object;
+package store.eu.object;
 
 public class BookCounterUpdate {
     private int cleanCode;

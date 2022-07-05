@@ -1,4 +1,4 @@
-package store.developmentbooks.object;
+package store.eu.object;
 
 public class Order {
     private int cleanCode;
